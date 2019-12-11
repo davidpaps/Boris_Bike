@@ -13,17 +13,17 @@ describe DockingStation do
   it { is_expected.to respond_to(:dock).with(1).argument }
     # 'is_expected_to' is shorter version of writing 'expect(subject).to'
 
-  it { is_expected.to respond_to(:bike) }
+  it { is_expected.to respond_to(:bikes)}
   
   it "docks bikes" do
     bike = Bike.new
-    expect(subject.dock(bike)).to eq bike
+    expect(subject.dock(bike)).to eq [bike]
   end
 
   it "counts docked bikes" do
     bike = Bike.new
     subject.dock(bike)
-    expect(subject.bike).to eq bike
+    expect(subject.bikes).to eq [bike]
   end
 
 
@@ -45,7 +45,7 @@ describe DockingStation do
 
 describe "#dock" do
   it "Error when dock full" do
-    subject.dock(Bike.new)
+    20.times {subject.dock(Bike.new)}
     expect {subject.dock(Bike.new)}.to raise_error "No room avaliable"
   end
 end
