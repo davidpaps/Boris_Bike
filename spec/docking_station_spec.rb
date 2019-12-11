@@ -43,7 +43,12 @@ describe DockingStation do
     end
   end
 
-
+describe "#dock" do
+  it "Error when dock full" do
+    subject.dock(Bike.new)
+    expect {subject.dock(Bike.new)}.to raise_error "No room avaliable"
+  end
+end
 
 end
 
