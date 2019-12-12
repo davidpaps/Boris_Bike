@@ -17,9 +17,7 @@ class DockingStation
   end
 
   attr_reader :bikes
-  # def bike
-  #   @bike
-  # end
+
 
 end
 

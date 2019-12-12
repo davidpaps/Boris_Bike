@@ -14,7 +14,7 @@ describe DockingStation do
     # 'is_expected_to' is shorter version of writing 'expect(subject).to'
 
   it { is_expected.to respond_to(:bikes)}
-  
+
   it "docks bikes" do
     bike = Bike.new
     expect(subject.dock(bike)).to eq [bike]
@@ -51,5 +51,3 @@ describe "#dock" do
 end
 
 end
-
-
