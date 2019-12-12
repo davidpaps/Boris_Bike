@@ -45,7 +45,7 @@ describe DockingStation do
 
 describe "#dock" do
   it "Error when dock full" do
-    20.times {subject.dock(Bike.new)}
+    DockingStation::DEFAULT_CAPACITY.times {subject.dock(Bike.new)}   # NAMESPACE OPERATOR , when calling a constant in rspec, qualify the constant with the class in which it is is declared. DockingStation::DEFAULT_CAPACITY
     expect {subject.dock(Bike.new)}.to raise_error "No room avaliable"
   end
 end
