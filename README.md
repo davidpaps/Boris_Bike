@@ -38,8 +38,11 @@ bike = Bike.new
 dockingstation = DockingStation.new
 ```
 
-This will return 2 Hexadecimal numbers, indicating the creation of the new objects. You can then type in the following commands to action the objects accordingly:
+This will return 2 Hexadecimal numbers, indicating the creation of the new objects. You can then type in the following in the command line to action the objects accordingly:
 
 ```
-
+dockingstation.dock(bike)
+dockingstation.release_bike
+bike.working?
+bike.report_broken
 ```
