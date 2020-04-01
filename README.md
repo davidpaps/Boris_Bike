@@ -46,3 +46,12 @@ dockingstation.release_bike
 bike.working?
 bike.report_broken
 ```
+---
+
+To run the test suite (RSpec and Capybara), in the command line type:
+
+```
+rspec
+```
+
+This will display 11 passing tests with 100% coverage.
